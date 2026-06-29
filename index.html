@@ -1,20 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Activity Tracker</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<script>
+function addTask() {
+    let input = document.getElementById("taskInput");
+    let task = input.value;
 
-    <div class="container">
-        <h1>Activity Tracker</h1>
+    if (task === "") return;
 
-        <h3 id="progress">0 out of 0 activities completed</h3>
+    let li = document.createElement("li");
+    li.innerHTML = task + 
+        ' <button onclick="markDone(this)">Mark Done</button>';
 
-        <ul id="activityList"></ul>
-    </div>
+    document.getElementById("taskList").appendChild(li);
 
-    <script src="script.js"></script>
+    input.value = "";
+}
+
+function markDone(button) {
+    button.parentElement.classList.add("completed");
+    button.innerText = "Completed";
+}
+</script>
+
 </body>
 </html>
