@@ -30,3 +30,40 @@ button {
     padding: 5px 10px;
     cursor: pointer;
 }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    text-align: center;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: white;
+    margin: 10px auto;
+    padding: 10px;
+    width: 300px;
+    border-radius: 8px;
+}
